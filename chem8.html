@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>8th sem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="cgpa.css">
+
+</head>
+<body>
+	<h2>Enter Your Grades...</h2>
+	<p id="apdna">Professional Elective – V(Nil)</p>
+	<select name="e-grade" id="e" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Professional Elective – VI(Nil)</p>
+	<select name="m-grade" id="m" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Project Work (CH8811)</p>
+	<select name="py-grade" id="py" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Seminar(CH8812)</p>
+	<select name="py-grade" id="pw" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<br><br>
+	
+	<button onclick="myfunction()" id="sub">Submit</button> 
+	
+	<p id="result"></p>
+	<script type="text/javascript">
+		function myfunction(){
+		var s1="",s2="",s3="",s4="";
+		var t,gpa;
+		s1=document.getElementById("e").value;
+		s2=document.getElementById("m").value;
+		s3=document.getElementById("py").value;
+		s4=document.getElementById("pw").value;
+		switch(s1){
+			case "o":
+			s1=10;
+			break;
+			case "a+":
+			s1=9;
+			break;
+			case "a":
+			s1=8;
+			break;
+			case "b+":
+			s1=7;
+			break;
+			case "b":
+			s1=6;
+			break;
+			case "ra":
+			s1=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s2){
+			case "o":
+			s2=10;
+			break;
+			case "a+":
+			s2=9;
+			break;
+			case "a":
+			s2=8;
+			break;
+			case "b+":
+			s2=7;
+			break;
+			case "b":
+			s2=6;
+			break;
+			case "ra":
+			s2=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s3){
+			case "o":
+			s3=10;
+			break;
+			case "a+":
+			s3=9;
+			break;
+			case "a":
+			s3=8;
+			break;
+			case "b+":
+			s3=7;
+			break;
+			case "b":
+			s3=6;
+			break;
+			case "ra":
+			s3=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s4){
+			case "o":
+			s4=10;
+			break;
+			case "a+":
+			s4=9;
+			break;
+			case "a":
+			s4=8;
+			break;
+			case "b+":
+			s4=7;
+			break;
+			case "b":
+			s4=6;
+			break;
+			case "ra":
+			s4=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		s1*=3;
+		s2*=3;
+		s3*=10;
+		s4*=2;
+		t=(s1+s2+s3+s4)/18;
+		gpa=t.toFixed(2);
+		document.getElementById("result").innerHTML="your gpa is:"+gpa;
+	}
+	</script>
+</body>
+</html>

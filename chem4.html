@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4th sem</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="cgpa.css">
+
+</head>
+<body>
+	<h2>Select Your Grades...</h2>
+	<p id="apdna">Numerical Methods(MA8491)</p>
+	<select name="e-grade" id="e" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Environmental Science and Engineering(GE8291)</p>
+	<select name="m-grade" id="m" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Instrumental Methods of Analysis(CH8491)</p>
+	<select name="py-grade" id="py" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Chemical Engineering Thermodynamics I(CH8401)</p>
+	<select name="eg-grade" id="eg" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Physical Chemistry(CH8402)</p>
+	<select name="ch-grade" id="ch" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Mechanical Operations(CH8451)</p>
+	<select name="p-grade" id="p" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Fluid Mechanics Laboratory(CH8461)</p>
+	<select name="py-lab" id="pyl" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+	<p>Organic Chemistry Laboratory(CY8281)</p>
+	<select name="pc-lab" id="pcl" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select><br><br>
+	
+	<button onclick="myfunction()" id="sub">Submit</button> 
+	
+	<p id="result"></p>
+	<script type="text/javascript">
+		function myfunction(){
+		var s1="",s2="",s3="",s4="",s5="",s6="",s7="",s8="";
+		var t,gpa;
+		s1=document.getElementById("e").value;
+		s2=document.getElementById("m").value;
+		s3=document.getElementById("py").value;
+		s4=document.getElementById("eg").value;
+		s5=document.getElementById("ch").value;
+		s6=document.getElementById("p").value;
+		s7=document.getElementById("pyl").value;
+		s8=document.getElementById("pcl").value;
+		switch(s1){
+			case "o":
+			s1=10;
+			break;
+			case "a+":
+			s1=9;
+			break;
+			case "a":
+			s1=8;
+			break;
+			case "b+":
+			s1=7;
+			break;
+			case "b":
+			s1=6;
+			break;
+			case "ra":
+			s1=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s2){
+			case "o":
+			s2=10;
+			break;
+			case "a+":
+			s2=9;
+			break;
+			case "a":
+			s2=8;
+			break;
+			case "b+":
+			s2=7;
+			break;
+			case "b":
+			s2=6;
+			break;
+			case "ra":
+			s2=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s3){
+			case "o":
+			s3=10;
+			break;
+			case "a+":
+			s3=9;
+			break;
+			case "a":
+			s3=8;
+			break;
+			case "b+":
+			s3=7;
+			break;
+			case "b":
+			s3=6;
+			break;
+			case "ra":
+			s3=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s4){
+			case "o":
+			s4=10;
+			break;
+			case "a+":
+			s4=9;
+			break;
+			case "a":
+			s4=8;
+			break;
+			case "b+":
+			s4=7;
+			break;
+			case "b":
+			s4=6;
+			break;
+			case "ra":
+			s4=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s5){
+			case "o":
+			s5=10;
+			break;
+			case "a+":
+			s5=9;
+			break;
+			case "a":
+			s5=8;
+			break;
+			case "b+":
+			s5=7;
+			break;
+			case "b":
+			s5=6;
+			break;
+			case "ra":
+			s5=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s6){
+			case "o":
+			s6=10;
+			break;
+			case "a+":
+			s6=9;
+			break;
+			case "a":
+			s6=8;
+			break;
+			case "b+":
+			s6=7;
+			break;
+			case "b":
+			s6=6;
+			break;
+			case "ra":
+			s6=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s7){
+			case "o":
+			s7=10;
+			break;
+			case "a+":
+			s7=9;
+			break;
+			case "a":
+			s7=8;
+			break;
+			case "b+":
+			s7=7;
+			break;
+			case "b":
+			s7=6;
+			break;
+			case "ra":
+			s7=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		switch(s8){
+			case "o":
+			s8=10;
+			break;
+			case "a+":
+			s8=9;
+			break;
+			case "a":
+			s8=8;
+			break;
+			case "b+":
+			s8=7;
+			break;
+			case "b":
+			s8=6;
+			break;
+			case "ra":
+			s8=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+
+		s1*=4;
+		s2*=3;
+		s3*=3;
+		s4*=3;
+		s5*=3;
+		s6*=3;
+		s7*=2;
+		s8*=2;
+		t=(s1+s2+s3+s4+s5+s6+s7+s8)/23;
+		gpa=t.toFixed(2);
+		document.getElementById("result").innerHTML="your gpa is:"+gpa;
+	}
+
+	</script>
+</body>
+</html>

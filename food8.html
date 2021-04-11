@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>8th sem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css">
+	<meta charset="UTF-8">
+	
+
+</head>
+<body>
+	<h2>Select Your Grades...</h2>
+	<p id="apdna">Project Work(FD8811)</p>
+	<select name="e-grade" id="e" required>
+		<option value="o">O</option>
+		<option value="a+">A+</option>
+		<option value="a">A</option>
+		<option value="b+">B+</option>
+		<option value="b">B</option>
+		<option value="ra">RA</option>
+	</select>
+
+	<br><br>
+	
+	<button onclick="myfunction()" id="sub">Submit</button> 
+	
+	<p id="result"></p>
+	<script type="text/javascript">
+		function myfunction(){
+		var s1="";
+		var t,gpa;
+		s1=document.getElementById("e").value;
+		switch(s1){
+			case "o":
+			s1=10;
+			break;
+			case "a+":
+			s1=9;
+			break;
+			case "a":
+			s1=8;
+			break;
+			case "b+":
+			s1=7;
+			break;
+			case "b":
+			s1=6;
+			break;
+			case "ra":
+			s1=0;
+			break;
+			default:
+			document.getElementById("result").innerHTML="invalid grade";
+			break;
+		}
+		s1*=10;
+		t=s1/10;
+		gpa=t.toFixed(2);
+		document.getElementById("result").innerHTML="your gpa is:"+gpa;
+	}
+	</script>
+</body>
+</html>
