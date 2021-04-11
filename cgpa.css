@@ -30,7 +30,9 @@
 
 		
 		@media only screen and (max-width:700px) {
-		
+			body{
+			background-image: url("ezgif.com-gif-maker.jpg"),url("ezgif.com-gif-maker.jpeg"),url("ezgif.com-gif-maker.jfif");
+			}
 
   
 
