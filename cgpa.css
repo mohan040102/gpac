@@ -33,7 +33,9 @@
 		@media only screen and (max-width:700px) {
 		
 
-  
+		#result{
+			font-size: 2rem;	
+		}
 
 		body{
 			background-image: url("maxresdefault.jpg"),url("ezgif.com-gif-maker.jpg");
